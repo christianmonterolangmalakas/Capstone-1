@@ -18,4 +18,10 @@ export const useAddressData = (
   const [regionOptions, setRegions] = useState<string[]>([]);
   const [provinceOptions, setProvinces] = useState<string[]>([]);
   const [municipalityOptions, setMunicipalities] = useState<string[]>([]);
-  const [barangayOptions, setBarangays] = useState<string[]>([]);
+    const [barangayOptions, setBarangays] = useState<string[]>([]);
+    
+ useEffect(() => {
+    const regionsData = getRegions();
+    setRegions(regionsData.map((item) => item.region_description));
+  }, []);
+  
