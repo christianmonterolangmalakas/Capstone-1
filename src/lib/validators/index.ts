@@ -51,3 +51,26 @@ export const workExperienceInfoSchema = z.object({
 
 
 
+export const educationInfoSchema = z.object({
+  degreeStatus: z.string().min(1, {
+    message: "Degree status is required",
+  }),
+  yearGraduated: z.coerce.number().min(1, {
+    message: "Year graduated is required",
+  }),
+});
+
+export const formDataSchema = z.object({
+  personalInfo: personalInfoSchema,
+  qualificationSkillsInfo: qualificationSkillsInfoSchema,
+  workExperienceInfo: workExperienceInfoSchema,
+  educationInfo: educationInfoSchema,
+});
+
+export type PersonalInfo = z.infer<typeof personalInfoSchema>;
+export type QualificationSkillsInfo = z.infer<
+  typeof qualificationSkillsInfoSchema
+>;
+export type WorkExperienceInfo = z.infer<typeof workExperienceInfoSchema>;
+export type EducationInfo = z.infer<typeof educationInfoSchema>;
+export type FormData = z.infer<typeof formDataSchema>;
