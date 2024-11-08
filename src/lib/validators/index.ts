@@ -56,3 +56,10 @@ export const educationInfoSchema = z.object({
     message: "Year graduated is required",
   }),
 });
+
+export const formDataSchema = z.object({
+  personalInfo: personalInfoSchema,
+  qualificationSkillsInfo: qualificationSkillsInfoSchema,
+  workExperienceInfo: workExperienceInfoSchema,
+  educationInfo: educationInfoSchema,
+});
