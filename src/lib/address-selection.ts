@@ -24,4 +24,10 @@ export const useAddressData = (
     const regionsData = getRegions();
     setRegions(regionsData.map((item) => item.region_description));
   }, []);
+ useEffect(() => {
+    const selectedRegion = getRegions().find(
+      (region) => region.region_description === selectedRegionName
+    );
+    setRegionId(selectedRegion?.region_id || null);
+  }, [selectedRegionName]);
   
