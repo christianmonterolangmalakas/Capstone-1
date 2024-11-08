@@ -37,4 +37,8 @@ useEffect(() => {
     );
     setProvinceId(selectedProvince?.province_id || null);
   }, [selectedProvinceName, regionId]);
-  
+  useEffect(() => {
+    const selectedMunicipality = getMunicipalities(provinceId).find(
+      (municipality) =>
+        municipality.municipality_name === selectedMunicipalityName
+    );
