@@ -29,5 +29,12 @@ export const useAddressData = (
       (region) => region.region_description === selectedRegionName
     );
     setRegionId(selectedRegion?.region_id || null);
-  }, [selectedRegionName]);
+ }, [selectedRegionName]);
+    
+useEffect(() => {
+    const selectedProvince = getProvinces(regionId).find(
+      (province) => province.province_name === selectedProvinceName
+    );
+    setProvinceId(selectedProvince?.province_id || null);
+  }, [selectedProvinceName, regionId]);
   
