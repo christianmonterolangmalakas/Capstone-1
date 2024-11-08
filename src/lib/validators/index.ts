@@ -18,3 +18,15 @@ export const personalInfoSchema = z.object({
   profileImage: z.string().optional(),
 });
 
+export const qualificationSkillsInfoSchema = z.object({
+  totalYearsExperience: z.coerce.number().min(1, {
+    message: "Years of experience is required",
+  }),
+  highestRoleAchieved: z.string().min(1, {
+    message: "Highest role achieved is required",
+  }),
+  fieldOfExpertise: z.string().min(1, {
+    message: "Field of expertise is required",
+  }),
+  awards: z.string().optional(),
+});
