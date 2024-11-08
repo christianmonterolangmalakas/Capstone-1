@@ -48,13 +48,6 @@ export const workExperienceInfoSchema = z.object({
     message: "Years worked in logistics company is required",
   }),
 });
-export const educationInfoSchema = z.object({
-  degreeStatus: z.string().min(1, {
-    message: "Degree status is required",
-  }),
-  yearGraduated: z.coerce.number().min(1, {
-    message: "Year graduated is required",
-  }),
-});
+
 
 
