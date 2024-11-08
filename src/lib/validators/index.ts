@@ -30,3 +30,21 @@ export const qualificationSkillsInfoSchema = z.object({
   }),
   awards: z.string().optional(),
 });
+export const workExperienceInfoSchema = z.object({
+  companyName: z.string().min(1, {
+    message: "Company name is required",
+  }),
+  jobPosition: z.string().min(1, {
+    message: "Job position is required",
+  }),
+  yearsWorkedInCompany: z.coerce.number().min(1, {
+    message: "Years worked in company is required",
+  }),
+  certificate: z.string().optional(),
+  logisticsCompany: z.string().min(1, {
+    message: "Logistics company is required",
+  }),
+  logisticsYearsWorked: z.coerce.number().min(1, {
+    message: "Years worked in logistics company is required",
+  }),
+});
