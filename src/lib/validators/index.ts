@@ -57,9 +57,4 @@ export const educationInfoSchema = z.object({
   }),
 });
 
-export const formDataSchema = z.object({
-  personalInfo: personalInfoSchema,
-  qualificationSkillsInfo: qualificationSkillsInfoSchema,
-  workExperienceInfo: workExperienceInfoSchema,
-  educationInfo: educationInfoSchema,
-});
+
