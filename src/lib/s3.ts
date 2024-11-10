@@ -13,18 +13,14 @@ export async function uploadToS3(file: File, progressCallback?: (progress: numbe
       },
       region: "us-east-1",
     });
-    const file_key = `uploads/${Date.now().toString()}_${file.name.replace(
-      / /g,
-      "-"
-    )}`;
+const file_key = `uploads/${Date.now().toString()}_${file.name.replace(/ /g, "-")}`;
 
     const params = {
       Bucket: process.env.NEXT_PUBLIC_S3_BUCKET_NAME!,
       Key: file_key,
       Body: file,
     };
-    const upload = s3
-      .putObject(params)
+    const upload = s3.putObject(params)
       .on("httpUploadProgress", (evt) => {
         const progress = Math.round((evt.loaded / evt.total) * 100);
         if (progressCallback) {
