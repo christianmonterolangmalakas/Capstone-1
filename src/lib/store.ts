@@ -35,4 +35,37 @@ const useApplicationAppStore = create<ApplicationAppState>((set, get) => ({
       zipCode: "",
       contactNumber: "",
       profileImage: "",
+    },qualificationSkillsInfo: {
+      totalYearsExperience: 0,
+      highestRoleAchieved: "",
+      fieldOfExpertise: "",
+      awards: "",
     },
+    workExperienceInfo: {
+      companyName: "",
+      jobPosition: "",
+      yearsWorkedInCompany: 0,
+      certificate: "",
+      logisticsCompany: "",
+      logisticsYearsWorked: 0,
+    },
+    educationInfo: {
+      degreeStatus: "",
+      yearGraduated: 0,
+    },
+  },
+  nextStep: () => set((state) => ({ step: state.step + 1 })),
+  prevStep: () => set((state) => ({ step: state.step - 1 })),
+  getTotalSteps: () => {
+    return Object.keys(get().formData).length + 1;
+  },
+  setPersonalInfo: (data) =>
+    set((state) => ({
+      formData: {
+        ...state.formData,
+        personalInfo: {
+          ...state.formData.personalInfo,
+          ...data,
+        },
+      },
+    })),
