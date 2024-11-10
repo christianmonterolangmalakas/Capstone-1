@@ -19,3 +19,20 @@ interface ApplicationAppState {
   setEducationInfo: (data: Partial<EducationInfo>) => void;
   submitForm: () => void;
 }
+const useApplicationAppStore = create<ApplicationAppState>((set, get) => ({
+  step: 1,
+  formData: {
+    personalInfo: {
+      name: "",
+      email: "",
+      age: 18,
+      sex: "",
+      houseNumber: "",
+      region: "",
+      province: "",
+      municipality: "",
+      barangay: "",
+      zipCode: "",
+      contactNumber: "",
+      profileImage: "",
+    },
