@@ -35,7 +35,8 @@ const useApplicationAppStore = create<ApplicationAppState>((set, get) => ({
       zipCode: "",
       contactNumber: "",
       profileImage: "",
-    },qualificationSkillsInfo: {
+    },
+    qualificationSkillsInfo: {
       totalYearsExperience: 0,
       highestRoleAchieved: "",
       fieldOfExpertise: "",
@@ -69,3 +70,79 @@ const useApplicationAppStore = create<ApplicationAppState>((set, get) => ({
         },
       },
     })),
+  setQualificationSkillsInfo: (data) =>
+    set((state) => ({
+      formData: {
+        ...state.formData,
+        qualificationSkillsInfo: {
+          ...state.formData.qualificationSkillsInfo,
+          ...data,
+        },
+      },
+    })),
+  setWorkExperienceInfo: (data) =>
+    set((state) => ({
+      formData: {
+        ...state.formData,
+        workExperienceInfo: {
+          ...state.formData.workExperienceInfo,
+          ...data,
+        },
+      },
+    })),
+  setEducationInfo: (data) =>
+    set((state) => ({
+      formData: {
+        ...state.formData,
+        educationInfo: {
+          ...state.formData.educationInfo,
+          ...data,
+        },
+      },
+    })),
+  submitForm: () => {
+    set((state) => {
+      console.log("Form submitted successfully");
+      console.log("Submitted Data", state.formData);
+      return {
+        step: 1,
+        formData: {
+          personalInfo: {
+            name: "",
+            email: "",
+            age: 18,
+            sex: "",
+            houseNumber: "",
+            region: "",
+            province: "",
+            municipality: "",
+            barangay: "",
+            zipCode: "",
+            contactNumber: "",
+            profileImage: "",
+          },
+          qualificationSkillsInfo: {
+            totalYearsExperience: 0,
+            highestRoleAchieved: "",
+            fieldOfExpertise: "",
+            awards: "",
+          },
+          workExperienceInfo: {
+            companyName: "",
+            jobPosition: "",
+            yearsWorkedInCompany: 0,
+            certificate: "",
+            logisticsCompany: "",
+            logisticsYearsWorked: 0,
+          },
+          educationInfo: {
+            degreeStatus: "",
+            yearGraduated: 0,
+          },
+        },
+      };
+    });
+  },
+}));
+
+export default useApplicationAppStore;
