@@ -27,3 +27,20 @@ export enum UploaderType {
   SINGLE_IMAGE = "single_image",
   MULTIPLE_IMAGE = "multiple_images",
 }
+export const AcceptedFileTypes = {
+  document: {
+    "application/pdf": [".pdf"],
+    "application/msword": [".doc", ".docx"],
+    "application/vnd.ms-excel": [".xls", ".xlsx"],
+    "text/csv": [".csv"],
+  },
+  image: { "image/*": [".jpg", ".jpeg", ".png", ".heic", ".heif"] },
+  default: {
+    "application/pdf": [".pdf"],
+    "application/msword": [".doc", ".docx"],
+    "application/vnd.ms-excel": [".xls", ".xlsx"],
+    "text/csv": [".csv"],
+    "text/plain": [".txt"],
+    "image/*": [".jpg", ".jpeg", ".png", ".heic", ".heif"],
+  },
+};
