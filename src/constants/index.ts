@@ -19,3 +19,11 @@ export enum FormFieldType {
   HIDDEN = "hidden",
   HONEY_POT = "honeyPot",
 }
+export enum UploaderType {
+  MULTIPLE_ANY = "multiple_any",
+  SINGLE_ANY = "single_any",
+  SINGLE_DOCUMENT = "single_document",
+  MULTIPLE_DOCUMENT = "multiple_documents",
+  SINGLE_IMAGE = "single_image",
+  MULTIPLE_IMAGE = "multiple_images",
+}
