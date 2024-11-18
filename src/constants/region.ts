@@ -57,4 +57,16 @@ const region: Region[] = [
     region_name: "Region V",
     region_description: "Bicol Region",
     FIELD4: "",
+    },
+   {
+    region_id: 9,
+    region_name: "Region VI",
+    region_description: "Western Visayas",
+    FIELD4: "",
+  },
+  {
+    region_id: 10,
+    region_name: "Region VII",
+    region_description: "Central Visayas",
+    FIELD4: "",
   },
