@@ -22,3 +22,15 @@ const region: Region[] = [
     region_description: "Cordillera Administrative Region",
     FIELD4: "",
   },
+  {
+    region_id: 3,
+    region_name: "Region I",
+    region_description: "Ilocos Region",
+    FIELD4: "",
+  },
+  {
+    region_id: 4,
+    region_name: "Region II",
+    region_description: "Cagayan Valley",
+    FIELD4: "",
+  },
