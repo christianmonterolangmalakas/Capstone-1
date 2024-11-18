@@ -45,4 +45,16 @@ const region: Region[] = [
     region_name: "Region IV-A",
     region_description: "CALABARZON",
     FIELD4: "",
+    },
+  {
+    region_id: 7,
+    region_name: "Region IV-B",
+    region_description: "MIMAROPA",
+    FIELD4: "",
+  },
+  {
+    region_id: 8,
+    region_name: "Region V",
+    region_description: "Bicol Region",
+    FIELD4: "",
   },
