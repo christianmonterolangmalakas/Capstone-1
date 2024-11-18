@@ -33,8 +33,8 @@ const region: Region[] = [
     region_name: "Region II",
     region_description: "Cagayan Valley",
     FIELD4: "",
-    },
-   {
+  },
+  {
     region_id: 5,
     region_name: "Region III",
     region_description: "Central Luzon",
@@ -45,7 +45,7 @@ const region: Region[] = [
     region_name: "Region IV-A",
     region_description: "CALABARZON",
     FIELD4: "",
-    },
+  },
   {
     region_id: 7,
     region_name: "Region IV-B",
@@ -57,8 +57,8 @@ const region: Region[] = [
     region_name: "Region V",
     region_description: "Bicol Region",
     FIELD4: "",
-    },
-   {
+  },
+  {
     region_id: 9,
     region_name: "Region VI",
     region_description: "Western Visayas",
@@ -70,3 +70,46 @@ const region: Region[] = [
     region_description: "Central Visayas",
     FIELD4: "",
   },
+  {
+    region_id: 11,
+    region_name: "Region VIII",
+    region_description: "Eastern Visayas",
+    FIELD4: "",
+  },
+  {
+    region_id: 12,
+    region_name: "Region IX",
+    region_description: "Zamboanga Peninsula",
+    FIELD4: "",
+  },
+  {
+    region_id: 13,
+    region_name: "Region X",
+    region_description: "Northern Mindanao",
+    FIELD4: "",
+  },
+  {
+    region_id: 14,
+    region_name: "Region XI",
+    region_description: "Davao Region",
+    FIELD4: "",
+  },
+  {
+    region_id: 15,
+    region_name: "Region XII",
+    region_description: "SOCCSKSARGEN",
+    FIELD4: "",
+  },
+  {
+    region_id: 16,
+    region_name: "Region XIII",
+    region_description: "CARAGA",
+    FIELD4: "",
+  },
+  {
+    region_id: 17,
+    region_name: "ARMM",
+    region_description: "Autonomous Region in Muslim Mindanao",
+    FIELD4: "",
+  },
+];
