@@ -33,4 +33,16 @@ const region: Region[] = [
     region_name: "Region II",
     region_description: "Cagayan Valley",
     FIELD4: "",
+    },
+   {
+    region_id: 5,
+    region_name: "Region III",
+    region_description: "Central Luzon",
+    FIELD4: "",
+  },
+  {
+    region_id: 6,
+    region_name: "Region IV-A",
+    region_description: "CALABARZON",
+    FIELD4: "",
   },
