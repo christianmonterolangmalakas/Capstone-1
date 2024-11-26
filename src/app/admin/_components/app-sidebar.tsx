@@ -33,7 +33,7 @@ const data = {
     email: "LazadaLogisticsPh",
     avatar: "/avatars/shadcn.jpg",
   },
-   navMain: [
+  navMain: [
     {
       title: "Application Management",
       url: "/admin/application-management",
@@ -44,7 +44,7 @@ const data = {
       url: "/admin/video-trainings",
       icon: Video,
     },
-     {
+    {
       title: "Queuing Interview",
       url: "/admin/queuing-interview",
       icon: TableOfContents,
@@ -54,13 +54,13 @@ const data = {
       url: "/admin/schedule-management",
       icon: CalendarCheck,
     },
-     {
+    {
       title: "Questionnaire Creation",
       url: "/admin/questionnaire-creation",
       icon: ClipboardPlus,
     },
   ],
-    projects: [
+  projects: [
     {
       title: "Evaluations",
       url: "/admin/evaluations",
@@ -71,3 +71,20 @@ const data = {
       url: "/admin/news-announcements",
       icon: Megaphone,
     },
+    {
+      title: "Job Applicants Analytics",
+      url: "/admin/news-announcements",
+      icon: ChartArea,
+    },
+    {
+      title: "System Administration",
+      url: "/admin/system-administration",
+      icon: UserCog,
+    },
+    {
+      title: "Report Generations",
+      url: "/admin/system-administration",
+      icon: ChartPie,
+    },
+  ],
+};
