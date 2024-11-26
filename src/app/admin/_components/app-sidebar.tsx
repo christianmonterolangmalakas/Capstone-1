@@ -44,3 +44,13 @@ const data = {
       url: "/admin/video-trainings",
       icon: Video,
     },
+     {
+      title: "Queuing Interview",
+      url: "/admin/queuing-interview",
+      icon: TableOfContents,
+    },
+    {
+      title: "Schedule Management",
+      url: "/admin/schedule-management",
+      icon: CalendarCheck,
+    },
