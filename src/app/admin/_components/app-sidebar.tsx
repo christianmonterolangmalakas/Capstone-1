@@ -60,3 +60,14 @@ const data = {
       icon: ClipboardPlus,
     },
   ],
+    projects: [
+    {
+      title: "Evaluations",
+      url: "/admin/evaluations",
+      icon: BrainCog,
+    },
+    {
+      title: "News & Announcements",
+      url: "/admin/news-announcements",
+      icon: Megaphone,
+    },
