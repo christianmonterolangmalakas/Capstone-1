@@ -33,3 +33,14 @@ const data = {
     email: "LazadaLogisticsPh",
     avatar: "/avatars/shadcn.jpg",
   },
+   navMain: [
+    {
+      title: "Application Management",
+      url: "/admin/application-management",
+      icon: SquareTerminal,
+    },
+    {
+      title: "Video Trainings",
+      url: "/admin/video-trainings",
+      icon: Video,
+    },
