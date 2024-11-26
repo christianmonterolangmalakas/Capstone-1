@@ -54,3 +54,9 @@ const data = {
       url: "/admin/schedule-management",
       icon: CalendarCheck,
     },
+     {
+      title: "Questionnaire Creation",
+      url: "/admin/questionnaire-creation",
+      icon: ClipboardPlus,
+    },
+  ],
