@@ -88,4 +88,18 @@ export function LoginForm() {
                     </FormItem>
                   )}
                 />
-              </div>
+  </div>
+               <div className="grid gap-2">
+                <FormField
+                  control={form.control}
+                  name="password"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Password</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="password"
+                          placeholder="Enter password"
+                          {...field}
+                          disabled={isLoading}
+                        />
