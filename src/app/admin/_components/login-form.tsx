@@ -40,3 +40,21 @@ export function LoginForm() {
       password: "",
     },
   });
+
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    setIsLoading(true);
+    try {
+      const response = await loginAdmin(values);
+      if (response.error) {
+        toast.error(response.error);
+      } else {
+        toast.success("You have successfully logged in.");
+        router.push("/admin/application-management");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error("An error occurred while logging in. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
