@@ -64,8 +64,8 @@ export function LoginForm() {
         <CardTitle className="text-2xl">Welcome Back, Admin!</CardTitle>
         <CardDescription>
           Enter your email address and password below to login to your account
-    </CardDescription>
-   </CardHeader>
+        </CardDescription>
+      </CardHeader>
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -88,8 +88,8 @@ export function LoginForm() {
                     </FormItem>
                   )}
                 />
-  </div>
-               <div className="grid gap-2">
+              </div>
+              <div className="grid gap-2">
                 <FormField
                   control={form.control}
                   name="password"
@@ -103,3 +103,20 @@ export function LoginForm() {
                           {...field}
                           disabled={isLoading}
                         />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <Button type="submit" disabled={isLoading} className="w-full">
+                Login
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  );
+}
+
