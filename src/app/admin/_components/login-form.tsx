@@ -25,4 +25,18 @@ import { toast } from "sonner";
 import { loginAdmin } from "@/actions/admin";
 import { useRouter } from "next/navigation";
 
+export const formSchema = z.object({
+  username: z.string().min(2, { message: "Username is required." }),
+  password: z.string().min(8, { message: "Password is required." }),
+});
 
+export function LoginForm() {
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: "",
+      password: "",
+    },
+  });
