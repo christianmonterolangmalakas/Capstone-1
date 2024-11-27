@@ -64,4 +64,28 @@ export function LoginForm() {
         <CardTitle className="text-2xl">Welcome Back, Admin!</CardTitle>
         <CardDescription>
           Enter your email address and password below to login to your account
-        </CardDescription>
+    </CardDescription>
+   </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)}>
+            <div className="grid gap-4">
+              <div className="grid gap-2">
+                <FormField
+                  control={form.control}
+                  name="username"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Username</FormLabel>
+                      <FormControl>
+                        <Input
+                          disabled={isLoading}
+                          placeholder="Enter username"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
