@@ -58,3 +58,10 @@ export function LoginForm() {
       setIsLoading(false);
     }
   };
+  return (
+    <Card className="mx-auto max-w-lg">
+      <CardHeader>
+        <CardTitle className="text-2xl">Welcome Back, Admin!</CardTitle>
+        <CardDescription>
+          Enter your email address and password below to login to your account
+        </CardDescription>
