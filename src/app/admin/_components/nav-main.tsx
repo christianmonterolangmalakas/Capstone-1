@@ -24,8 +24,8 @@ export function NavMain({
     }[];
   }[];
 }) {
-    return (
-      <SidebarGroup>
+  return (
+    <SidebarGroup>
       <SidebarGroupLabel>General</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => (
@@ -35,3 +35,15 @@ export function NavMain({
             defaultOpen={item.isActive}
             className="group/collapsible"
           >
+            <SidebarMenuItem>
+              <SidebarMenuButton tooltip={item.title}>
+                {item.icon && <item.icon />}
+                <span>{item.title}</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </Collapsible>
+        ))}
+      </SidebarMenu>
+    </SidebarGroup>
+  );
+}
