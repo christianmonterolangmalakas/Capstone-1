@@ -55,4 +55,15 @@ import {
             asChild
             defaultOpen={item.isActive}
             className="group/collapsible"
-          >
+          > <SidebarMenuItem>
+              <SidebarMenuButton tooltip={item.title}>
+                {item.icon && <item.icon />}
+                <span>{item.title}</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </Collapsible>
+        ))}
+      </SidebarMenu>
+    </SidebarGroup>
+  );
+}
