@@ -31,3 +31,17 @@ import {
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
+              export function NavProjects({
+  items,
+}: {
+  items: {
+    title: string;
+    url: string;
+    icon?: LucideIcon;
+    isActive?: boolean;
+    items?: {
+      title: string;
+      url: string;
+    }[];
+  }[];
+}) {
