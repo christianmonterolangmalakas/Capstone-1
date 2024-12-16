@@ -193,3 +193,22 @@ const FailModal = ({
       setLoading(false);
     }
   };
+   return (
+    <Modal
+      isOpen={isOpen}
+      onClose={onClose}
+      description="This action cannot be undone"
+      title="Are you sure you want to fail this application?"
+    >
+      <form onSubmit={handleSubmit} className="space-y-3">
+        <div className="space-y-1">
+          <Label>
+            Reason for Failure <span className="text-red-500">*</span>
+          </Label>
+          <Textarea
+            value={reason}
+            onChange={(e) => setReason(e.target.value)}
+            disabled={loading}
+            placeholder="Enter Reason for Failure"
+          />
+        </div>
