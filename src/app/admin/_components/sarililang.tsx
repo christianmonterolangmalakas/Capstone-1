@@ -145,3 +145,12 @@ const Onboarding = () => {
         educational information. This will help us evaluate your qualifications
         for the role.
       </p>
+           {/* STEPS */}
+      <div className="relative z-10 mt-10 p-6 bg-white shadow-lg border rounded-lg max-w-4xl mx-auto">
+        {/* PROGRESS BAR */}
+        <ProgressBar />
+        {renderStep()}
+      </div>
+    </div>
+  );
+};
