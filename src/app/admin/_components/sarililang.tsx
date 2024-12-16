@@ -166,3 +166,30 @@ const FailModal = ({
   const params = useParams();
   const [reason, setReason] = React.useState("");
   const [loading, setLoading] = React.useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      if (typeof params.applicationId === "string") {
+        const response = await failApplicant(
+          params.applicationId,
+          data.jobApplicant.name,
+          data.jobApplicant.email,
+          reason
+        );
+        if (response.error) {
+          toast.error(response.error);
+        } else {
+          toast.success(response.success);
+          window.location.assign("/admin/application-management");
+        }
+      } else {
+        toast.error("Invalid application ID");
+      }
+    } catch (error) {
+      toast.error("Failed to fail application");
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
