@@ -111,3 +111,23 @@ export default function RootLayout({
     </html>
   );
 }
+const Onboarding = () => {
+  const { step } = useApplicationAppStore();
+
+  // Function to render the current step based on the state
+  const renderStep = () => {
+    switch (step) {
+      case 1:
+        return <PersonalInfo />;
+      case 2:
+        return <QualificationInfo />;
+      case 3:
+        return <WorkInfo />;
+      case 4:
+        return <EducationInfo />;
+      case 5:
+        return <ReviewSubmit />;
+      default:
+        return null;
+    }
+  };
