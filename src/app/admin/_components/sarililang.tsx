@@ -154,3 +154,15 @@ const Onboarding = () => {
     </div>
   );
 };
+const FailModal = ({
+  isOpen,
+  onClose,
+  data,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  data: any;
+}) => {
+  const params = useParams();
+  const [reason, setReason] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
