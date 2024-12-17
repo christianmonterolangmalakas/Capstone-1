@@ -271,3 +271,29 @@ const EducationInfo = () => {
                 handleSelectChange("degreeStatus", value);
               }}
             >
+              <SelectTrigger
+                className={`${
+                  errors.degreeStatus ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+              >
+                <SelectValue placeholder="--Degree/Undegraduate Status--" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Bachelor's Degree">
+                  Bachelor&apos;s Degree
+                </SelectItem>
+                <SelectItem value="College Undergraduate (3rd or 4th year)">
+                  College Undergraduate (3rd or 4th year)
+                </SelectItem>
+                <SelectItem value="College Undergraduate (1st or 2nd year)">
+                  College Undergraduate (1st or 2nd year)
+                </SelectItem>
+                <SelectItem value="No Degree or Dropped Out">
+                  No Degree or Dropped Out
+                </SelectItem>
+              </SelectContent>
+            </Select>
+            {errors.degreeStatus && (
+              <p className="text-red-500 text-sm">{errors.degreeStatus}</p>
+            )}
+          </div>
