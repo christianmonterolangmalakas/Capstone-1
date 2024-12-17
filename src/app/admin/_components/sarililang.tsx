@@ -212,3 +212,18 @@ const FailModal = ({
             placeholder="Enter Reason for Failure"
           />
         </div>
+        "use client";
+
+import React, { useState } from "react";
+import { Button } from "../ui/button";
+import useApplicationAppStore from "@/lib/store";
+import { educationInfoSchema } from "@/lib/validators";
+import { Separator } from "../ui/separator";
+import { Label } from "../ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
