@@ -262,3 +262,12 @@ const EducationInfo = () => {
                 errors.degreeStatus ? "text-red-500" : "text-gray-900"
               }`}
             >
+               Degree/Undergraduate Status
+              <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              defaultValue={formData.educationInfo.degreeStatus}
+              onValueChange={(value) => {
+                handleSelectChange("degreeStatus", value);
+              }}
+            >
