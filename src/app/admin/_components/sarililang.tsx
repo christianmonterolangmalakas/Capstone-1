@@ -296,4 +296,19 @@ const EducationInfo = () => {
             {errors.degreeStatus && (
               <p className="text-red-500 text-sm">{errors.degreeStatus}</p>
             )}
-          </div>
+</div>
+          const PersonalInfo = () => {
+  const { nextStep, formData, setPersonalInfo } = useApplicationAppStore();
+  const [errors, setErrors] = useState<any>({});
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setErrors((prev: any) => ({ ...prev, [e.target.name]: "" }));
+    setPersonalInfo({ [e.target.name]: e.target.value });
+  };
+  const handleImageUpload = (url: string) => {
+    setPersonalInfo({ profileImage: url });
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setErrors((prev: any) => ({ ...prev, [name]: "" }));
+    setPersonalInfo({ [name]: value });
+  };
