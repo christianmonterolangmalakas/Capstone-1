@@ -227,3 +227,25 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+
+const EducationInfo = () => {
+  const { nextStep, prevStep, formData, setEducationInfo } =
+    useApplicationAppStore();
+  const [errors, setErrors] = useState<any>({});
+  const handleSelectChange = (name: string, value: string) => {
+    setErrors((prev: any) => ({ ...prev, [name]: "" }));
+    setEducationInfo({ [name]: value });
+  };
+  const validateAndNext = () => {
+    try {
+      educationInfoSchema.parse(formData.educationInfo);
+      setErrors({});
+      nextStep();
+    } catch (error: any) {
+      const errorMap: any = {};
+      error.errors.forEach((err: any) => {
+        errorMap[err.path[0]] = err.message;
+      });
+      setErrors(errorMap);
+    }
+  };
