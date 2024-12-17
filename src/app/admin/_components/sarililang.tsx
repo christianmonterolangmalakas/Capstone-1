@@ -249,3 +249,16 @@ const EducationInfo = () => {
       setErrors(errorMap);
     }
   };
+
+  return (
+    <div>
+      <h2 className="text-xl font-semibold pb-3">Educational Attainments</h2>
+      <Separator className="bg-zinc-300" />
+      <div className="mt-5">
+        <div className="grid md:grid-cols-2 mt-5 gap-6">
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.degreeStatus ? "text-red-500" : "text-gray-900"
+              }`}
+            >
