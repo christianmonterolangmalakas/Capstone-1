@@ -328,3 +328,16 @@ const EducationInfo = () => {
     selectedProvinceName,
     selectedMunicipalityName
   );
+  const validateAndNext = () => {
+    try {
+      personalInfoSchema.parse(formData.personalInfo);
+      setErrors({});
+      nextStep();
+    } catch (error: any) {
+      const errorMap: any = {};
+      error.errors.forEach((err: any) => {
+        errorMap[err.path[0]] = err.message;
+      });
+      setErrors(errorMap);
+    }
+  };
