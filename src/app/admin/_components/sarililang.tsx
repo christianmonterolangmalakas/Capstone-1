@@ -312,3 +312,19 @@ const EducationInfo = () => {
     setErrors((prev: any) => ({ ...prev, [name]: "" }));
     setPersonalInfo({ [name]: value });
   };
+
+  const [selectedRegionName, setSelectedRegionName] = useState<string>("");
+  const [selectedProvinceName, setSelectedProvinceName] = useState<string>("");
+  const [selectedMunicipalityName, setSelectedMunicipalityName] =
+    useState<string>("");
+
+  const {
+    regionOptions,
+    provinceOptions,
+    municipalityOptions,
+    barangayOptions,
+  } = useAddressData(
+    selectedRegionName,
+    selectedProvinceName,
+    selectedMunicipalityName
+  );
