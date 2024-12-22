@@ -361,3 +361,20 @@ const EducationInfo = () => {
                   errors.name ? "text-red-500" : "text-gray-900"
                 }`}
               >
+               Full Name <span className="text-red-500">*</span>
+              </Label>
+              <Input
+                type="text"
+                required
+                placeholder="Enter full name"
+                name="name"
+                value={formData.personalInfo.name}
+                className={`${
+                  errors.name ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+                onChange={handleChange}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name}</p>
+              )}
+            </div>
