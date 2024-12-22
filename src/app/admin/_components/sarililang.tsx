@@ -341,3 +341,23 @@ const EducationInfo = () => {
       setErrors(errorMap);
     }
   };
+
+             return (
+    <div>
+      <h2 className="text-xl font-semibold pb-3">Personal Information</h2>
+      <Separator className="bg-zinc-300" />
+      <div className="mt-5">
+        <div className="grid grid-cols-5 mb-5 gap-6">
+          <div className="col-span-1">
+            <ImageUpload
+              defaultValue={formData.personalInfo.profileImage}
+              onImageUpload={handleImageUpload}
+            />
+          </div>
+          <div className="col-span-4 space-y-4">
+            <div className="space-y-1">
+              <Label
+                className={`text-sm ${
+                  errors.name ? "text-red-500" : "text-gray-900"
+                }`}
+              >
