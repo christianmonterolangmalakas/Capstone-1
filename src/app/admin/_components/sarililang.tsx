@@ -377,4 +377,24 @@ const EducationInfo = () => {
               {errors.name && (
                 <p className="text-red-500 text-sm">{errors.name}</p>
               )}
-            </div>
+  </div>
+             
+            <div className="space-y-1">
+              <Label
+                className={`text-sm ${
+                  errors.email ? "text-red-500" : "text-gray-900"
+                }`}
+              >
+                Email Address <span className="text-red-500">*</span>
+              </Label>
+              <Input
+                type="email"
+                required
+                placeholder="Enter email address"
+                name="email"
+                className={`${
+                  errors.email ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+                value={formData.personalInfo.email}
+                onChange={handleChange}
+              />
