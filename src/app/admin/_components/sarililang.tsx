@@ -501,4 +501,20 @@ const EducationInfo = () => {
               <p className="text-red-500 text-sm">{errors.houseNumber}</p>
             )}
           </div>
-        </div>
+  </div>
+         <div className="grid md:grid-cols-2 mt-5 gap-6">
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.region ? "text-red-500" : "text-gray-900"
+              }`}
+            >
+              Region <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              defaultValue={selectedRegionName}
+              onValueChange={(value) => {
+                setSelectedRegionName(value);
+                handleSelectChange("region", value);
+              }}
+            >
