@@ -476,4 +476,29 @@ const EducationInfo = () => {
             {errors.contactNumber && (
               <p className="text-red-500 text-sm">{errors.contactNumber}</p>
             )}
+  </div>
+           <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.houseNumber ? "text-red-500" : "text-gray-900"
+              }`}
+            >
+              House/Unit/Block No., Street, Subdivision/Village{" "}
+              <span className="text-red-500">*</span>
+            </Label>
+            <Input
+              type="text"
+              required
+              placeholder="Enter house number"
+              name="houseNumber"
+              value={formData.personalInfo.houseNumber}
+              className={`${
+                errors.houseNumber ? "border-red-500 focus:ring-red-500" : ""
+              }`}
+              onChange={handleChange}
+            />
+            {errors.houseNumber && (
+              <p className="text-red-500 text-sm">{errors.houseNumber}</p>
+            )}
           </div>
+        </div>
