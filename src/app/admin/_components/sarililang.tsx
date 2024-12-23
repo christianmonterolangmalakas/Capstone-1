@@ -432,3 +432,14 @@ const EducationInfo = () => {
                 errors.sex ? "text-red-500" : "text-gray-900"
               }`}
             >
+             Sex <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              defaultValue={formData.personalInfo.sex}
+              onValueChange={(value) => handleSelectChange("sex", value)}
+            >
+              <SelectTrigger
+                className={`${
+                  errors.sex ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+              >
