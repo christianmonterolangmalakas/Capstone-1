@@ -460,3 +460,20 @@ const EducationInfo = () => {
                 errors.contactNumber ? "text-red-500" : "text-gray-900"
               }`}
             >
+                Phone Number <span className="text-red-500">*</span>
+            </Label>
+            <Input
+              type="number"
+              required
+              placeholder="Enter phone number"
+              name="contactNumber"
+              className={`${
+                errors.contactNumber ? "border-red-500 focus:ring-red-500" : ""
+              }`}
+              value={formData.personalInfo.contactNumber}
+              onChange={handleChange}
+            />
+            {errors.contactNumber && (
+              <p className="text-red-500 text-sm">{errors.contactNumber}</p>
+            )}
+          </div>
