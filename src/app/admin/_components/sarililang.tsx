@@ -411,3 +411,24 @@ const EducationInfo = () => {
                 errors.age ? "text-red-500" : "text-gray-900"
               }`}
             >
+             Age <span className="text-red-500">*</span>
+            </Label>
+            <Input
+              type="number"
+              required
+              placeholder="Enter age"
+              name="age"
+              value={formData.personalInfo.age}
+              className={`${
+                errors.age ? "border-red-500 focus:ring-red-500" : ""
+              }`}
+              onChange={handleChange}
+            />
+            {errors.age && <p className="text-red-500 text-sm">{errors.age}</p>}
+          </div>
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.sex ? "text-red-500" : "text-gray-900"
+              }`}
+            >
