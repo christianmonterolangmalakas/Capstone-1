@@ -518,3 +518,22 @@ const EducationInfo = () => {
                 handleSelectChange("region", value);
               }}
             >
+              <SelectTrigger
+                className={`${
+                  errors.region ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+              >
+                <SelectValue placeholder="Select region" />
+              </SelectTrigger>
+              <SelectContent>
+                {regionOptions.map((region) => (
+                  <SelectItem key={region} value={region}>
+                    {region}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {errors.region && (
+              <p className="text-red-500 text-sm">{errors.region}</p>
+            )}
+          </div>
