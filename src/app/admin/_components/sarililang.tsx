@@ -443,3 +443,20 @@ const EducationInfo = () => {
                   errors.sex ? "border-red-500 focus:ring-red-500" : ""
                 }`}
               >
+               <SelectValue placeholder="Select sex" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Male">Male</SelectItem>
+                <SelectItem value="Female">Female</SelectItem>
+              </SelectContent>
+            </Select>
+            {errors.sex && <p className="text-red-500 text-sm">{errors.sex}</p>}
+          </div>
+        </div>
+        <div className="grid md:grid-cols-2 mt-5 gap-6">
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.contactNumber ? "text-red-500" : "text-gray-900"
+              }`}
+            >
