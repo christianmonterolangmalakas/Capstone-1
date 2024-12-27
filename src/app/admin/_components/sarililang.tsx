@@ -572,3 +572,24 @@ const EducationInfo = () => {
             )}
           </div>
         </div>
+         <div className="grid md:grid-cols-3 mt-5 gap-6">
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.municipality ? "text-red-500" : "text-gray-900"
+              }`}
+            >
+              Municipality <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              defaultValue={selectedMunicipalityName}
+              onValueChange={(value) => {
+                setSelectedMunicipalityName(value);
+                handleSelectChange("municipality", value);
+              }}
+            >
+              <SelectTrigger
+                className={`${
+                  errors.municipality ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+              >
