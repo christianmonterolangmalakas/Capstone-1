@@ -537,3 +537,23 @@ const EducationInfo = () => {
               <p className="text-red-500 text-sm">{errors.region}</p>
             )}
           </div>
+           <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.province ? "text-red-500" : "text-gray-900"
+              }`}
+            >
+              Province <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              defaultValue={selectedProvinceName}
+              onValueChange={(value) => {
+                setSelectedProvinceName(value);
+                handleSelectChange("province", value);
+              }}
+            >
+              <SelectTrigger
+                className={`${
+                  errors.province ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+              >
