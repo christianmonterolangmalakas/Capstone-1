@@ -613,3 +613,28 @@ const EducationInfo = () => {
                 errors.barangay ? "text-red-500" : "text-gray-900"
               }`}
             >
+               Barangay <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              defaultValue={formData.personalInfo.barangay}
+              onValueChange={(value) => handleSelectChange("barangay", value)}
+            >
+              <SelectTrigger
+                className={`${
+                  errors.barangay ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+              >
+                <SelectValue placeholder="Select barangay" />
+              </SelectTrigger>
+              <SelectContent>
+                {barangayOptions.map((barangay) => (
+                  <SelectItem key={barangay} value={barangay}>
+                    {barangay}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {errors.barangay && (
+              <p className="text-red-500 text-sm">{errors.barangay}</p>
+            )}
+          </div>
