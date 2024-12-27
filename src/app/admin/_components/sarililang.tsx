@@ -557,3 +557,18 @@ const EducationInfo = () => {
                   errors.province ? "border-red-500 focus:ring-red-500" : ""
                 }`}
               >
+                <SelectValue placeholder="Select province" />
+              </SelectTrigger>
+              <SelectContent>
+                {provinceOptions.map((province) => (
+                  <SelectItem key={province} value={province}>
+                    {province}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {errors.province && (
+              <p className="text-red-500 text-sm">{errors.province}</p>
+            )}
+          </div>
+        </div>
