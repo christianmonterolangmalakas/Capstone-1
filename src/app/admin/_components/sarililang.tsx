@@ -658,4 +658,17 @@ const EducationInfo = () => {
             />
             {errors.zipCode && (
               <p className="text-red-500 text-sm">{errors.zipCode}</p>
-            )}
+            )
+}
+              </div>
+        </div>
+      </div>
+      {/* BUTTONS */}
+      <div className="flex justify-end mt-5">
+        <Button onClick={validateAndNext}>Next &rarr;</Button>
+      </div>
+    </div>
+  );
+};
+
+export default PersonalInfo;
