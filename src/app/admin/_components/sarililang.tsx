@@ -593,3 +593,23 @@ const EducationInfo = () => {
                   errors.municipality ? "border-red-500 focus:ring-red-500" : ""
                 }`}
               >
+              <SelectValue placeholder="Select municipality" />
+              </SelectTrigger>
+              <SelectContent>
+                {municipalityOptions.map((municipality) => (
+                  <SelectItem key={municipality} value={municipality}>
+                    {municipality}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {errors.municipality && (
+              <p className="text-red-500 text-sm">{errors.municipality}</p>
+            )}
+          </div>
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.barangay ? "text-red-500" : "text-gray-900"
+              }`}
+            >
