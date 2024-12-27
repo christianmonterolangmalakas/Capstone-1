@@ -638,3 +638,24 @@ const EducationInfo = () => {
               <p className="text-red-500 text-sm">{errors.barangay}</p>
             )}
           </div>
+           <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.zipCode ? "text-red-500" : "text-gray-900"
+              }`}
+            >
+              Zip Code <span className="text-red-500">*</span>
+            </Label>
+            <Input
+              required
+              placeholder="Enter zip code"
+              name="zipCode"
+              value={formData.personalInfo.zipCode}
+              className={`${
+                errors.zipCode ? "border-red-500 focus:ring-red-500" : ""
+              }`}
+              onChange={handleChange}
+            />
+            {errors.zipCode && (
+              <p className="text-red-500 text-sm">{errors.zipCode}</p>
+            )}
