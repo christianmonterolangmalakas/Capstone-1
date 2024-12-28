@@ -671,4 +671,24 @@ const EducationInfo = () => {
   );
 };
 
-export default PersonalInfo;
+const QualificationInfo = () => {
+  const { nextStep, formData, setQualificationSkillsInfo, prevStep } =
+    useApplicationAppStore();
+  const [errors, setErrors] = useState<any>({});
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setErrors((prev: any) => ({ ...prev, [e.target.name]: "" }));
+    setQualificationSkillsInfo({ [e.target.name]: e.target.value });
+  };
+  const validateAndNext = () => {
+    try {
+      qualificationSkillsInfoSchema.parse(formData.qualificationSkillsInfo);
+      setErrors({});
+      nextStep();
+    } catch (error: any) {
+      const errorMap: any = {};
+      error.errors.forEach((err: any) => {
+        errorMap[err.path[0]] = err.message;
+      });
+      setErrors(errorMap);
+    }
+  };
