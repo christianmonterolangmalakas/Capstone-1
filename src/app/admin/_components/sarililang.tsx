@@ -739,3 +739,23 @@ const fieldOfExpertiseOptions = [
                 } as React.ChangeEvent<HTMLInputElement>)
               }
             >
+              <SelectTrigger
+                className={`${
+                  errors.totalYearsExperience
+                    ? "border-red-500 focus:ring-red-500"
+                    : ""
+                }`}
+              >
+                <SelectValue placeholder="--Experience (Years)--" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="2 years and above">
+                  2 years and above
+                </SelectItem>
+                <SelectItem value="1 and 1/2 years">1 and 1/2 years</SelectItem>
+                <SelectItem value="6 months">6 months</SelectItem>
+                <SelectItem value="3 months and below">
+                  3 months and below
+                </SelectItem>
+              </SelectContent>
+            </Select>
