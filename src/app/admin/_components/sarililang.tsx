@@ -758,4 +758,16 @@ const fieldOfExpertiseOptions = [
                   3 months and below
                 </SelectItem>
               </SelectContent>
-            </Select>
+  </Select>
+             {errors.totalYearsExperience && (
+              <p className="text-red-500 text-sm">
+                {errors.totalYearsExperience}
+              </p>
+            )}
+          </div>
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.highestRoleAchieved ? "text-red-500" : "text-gray-900"
+              }`}
+            >
