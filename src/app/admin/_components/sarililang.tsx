@@ -785,3 +785,27 @@ const fieldOfExpertiseOptions = [
                 } as React.ChangeEvent<HTMLInputElement>)
               }
             >
+               <SelectTrigger
+                className={`${
+                  errors.highestRoleAchieved
+                    ? "border-red-500 focus:ring-red-500"
+                    : ""
+                }`}
+              >
+                <SelectValue placeholder="--Highest Role/Position Achieved--" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Mid-Level Management">
+                  Mid-Level Management
+                </SelectItem>
+                <SelectItem value="Junior Position">Junior Position</SelectItem>
+                <SelectItem value="Entry-Level Position">
+                  Entry-Level Position
+                </SelectItem>
+              </SelectContent>
+            </Select>
+            {errors.highestRoleAchieved && (
+              <p className="text-red-500 text-sm">
+                {errors.highestRoleAchieved}
+              </p>
+            )}
