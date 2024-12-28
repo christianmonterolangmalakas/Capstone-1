@@ -726,3 +726,16 @@ const fieldOfExpertiseOptions = [
                 errors.totalYearsExperience ? "text-red-500" : "text-gray-900"
               }`}
             >
+                Experience (Years) <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              name="totalYearsExperience"
+              defaultValue={
+                formData.qualificationSkillsInfo.totalYearsExperience
+              }
+              onValueChange={(value) =>
+                handleChange({
+                  target: { name: "totalYearsExperience", value },
+                } as React.ChangeEvent<HTMLInputElement>)
+              }
+            >
