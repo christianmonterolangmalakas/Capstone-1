@@ -849,4 +849,32 @@ const fieldOfExpertiseOptions = [
             </Select>
             {errors.fieldOfExpertise && (
               <p className="text-red-500 text-sm">{errors.fieldOfExpertise}</p>
-            )}
+            )
+}
+             </div>
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.awards ? "text-red-500" : "text-gray-900"
+              }`}
+            >
+              Awards (if any)
+            </Label>
+            <Select
+              name="awards"
+              defaultValue={
+                formData.qualificationSkillsInfo.awards
+              }
+              onValueChange={(value) =>
+                handleChange({
+                  target: { name: "awards", value },
+                } as React.ChangeEvent<HTMLInputElement>)
+              }
+            >
+              <SelectTrigger
+                className={`${
+                  errors.awards
+                    ? "border-red-500 focus:ring-red-500"
+                    : ""
+                }`}
+              >
