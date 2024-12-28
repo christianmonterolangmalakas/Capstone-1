@@ -771,3 +771,17 @@ const fieldOfExpertiseOptions = [
                 errors.highestRoleAchieved ? "text-red-500" : "text-gray-900"
               }`}
             >
+              Highest Role/Position Achieved{" "}
+              <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              name="highestRoleAchieved"
+              defaultValue={
+                formData.qualificationSkillsInfo.highestRoleAchieved
+              }
+              onValueChange={(value) =>
+                handleChange({
+                  target: { name: "highestRoleAchieved", value },
+                } as React.ChangeEvent<HTMLInputElement>)
+              }
+            >
