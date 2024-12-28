@@ -808,4 +808,25 @@ const fieldOfExpertiseOptions = [
               <p className="text-red-500 text-sm">
                 {errors.highestRoleAchieved}
               </p>
-            )}
+            )
+}
+             </div>
+        </div>
+        <div className="grid md:grid-cols-2 mt-5 gap-6">
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.fieldOfExpertise ? "text-red-500" : "text-gray-900"
+              }`}
+            >
+              Field of Expertise <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              name="fieldOfExpertise"
+              defaultValue={formData.qualificationSkillsInfo.fieldOfExpertise}
+              onValueChange={(value) =>
+                handleChange({
+                  target: { name: "fieldOfExpertise", value },
+                } as React.ChangeEvent<HTMLInputElement>)
+              }
+            >
