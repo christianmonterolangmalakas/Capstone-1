@@ -692,3 +692,37 @@ const QualificationInfo = () => {
       setErrors(errorMap);
     }
   };
+const fieldOfExpertiseOptions = [
+    "Operations Management",
+    "Warehouse Manager",
+    "Transportation Analyst",
+    "Logistics Engineer",
+    "Inventory Manager",
+    "Procurement Manager",
+    "Customer Service Representative",
+    "Dispatcher",
+    "Encoder",
+    "IT in logistics field",
+    "Business Related Field",
+    "Engineering Related Field",
+    "Accounting Related Field",
+    "Human Resource Related Field",
+    "Marketing Related Field",
+    "Arts and Design Related Field",
+    "Health and Medical Related Field",
+    "Others",
+  ];
+   return (
+    <div>
+      <h2 className="text-xl font-semibold pb-3">
+        Qualification and Skill Criteria
+      </h2>
+      <Separator className="bg-zinc-300" />
+      <div className="mt-5">
+        <div className="grid md:grid-cols-2 mt-5 gap-6">
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.totalYearsExperience ? "text-red-500" : "text-gray-900"
+              }`}
+            >
