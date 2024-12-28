@@ -830,3 +830,23 @@ const fieldOfExpertiseOptions = [
                 } as React.ChangeEvent<HTMLInputElement>)
               }
             >
+               <SelectTrigger
+                className={`${
+                  errors.fieldOfExpertise
+                    ? "border-red-500 focus:ring-red-500"
+                    : ""
+                }`}
+              >
+                <SelectValue placeholder="--Field of Expertise--" />
+              </SelectTrigger>
+              <SelectContent>
+                {fieldOfExpertiseOptions.map((option) => (
+                  <SelectItem key={option} value={option}>
+                    {option}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {errors.fieldOfExpertise && (
+              <p className="text-red-500 text-sm">{errors.fieldOfExpertise}</p>
+            )}
