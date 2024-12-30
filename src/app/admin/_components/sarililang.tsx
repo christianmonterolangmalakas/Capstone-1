@@ -878,3 +878,19 @@ const fieldOfExpertiseOptions = [
                     : ""
                 }`}
               >
+                  <SelectValue placeholder="--Awards (if any)--" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="International/National Level Award">
+                  International/National Level Award
+                </SelectItem>
+                <SelectItem value="Company/Industry-Recognized Award">Company/Industry-Recognized Award</SelectItem>
+                <SelectItem value="No Awards">No Awards</SelectItem>
+              </SelectContent>
+            </Select>
+            {errors.awards && (
+              <p className="text-red-500 text-sm">{errors.awards}</p>
+            )}
+          </div>
+        </div>
+      </div>
