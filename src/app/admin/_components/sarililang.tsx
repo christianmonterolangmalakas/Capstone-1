@@ -894,3 +894,15 @@ const fieldOfExpertiseOptions = [
           </div>
         </div>
       </div>
+       {/* BUTTONS */}
+      <div className="flex justify-end mt-5 gap-3">
+        <Button variant="outline" onClick={prevStep}>
+          Previous &larr;
+        </Button>
+        <Button onClick={validateAndNext}>Next &rarr;</Button>
+      </div>
+    </div>
+  );
+};
+
+export default QualificationInfo;
