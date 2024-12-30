@@ -945,4 +945,30 @@ const ProgressBar = () => {
       });
       setErrors(errorMap);
     }
-  };
+    };
+    return (
+    <div>
+      <h2 className="text-xl font-semibold pb-3">Educational Attainments</h2>
+      <Separator className="bg-zinc-300" />
+      <div className="mt-5">
+        <div className="grid md:grid-cols-2 mt-5 gap-6">
+          <div className="space-y-1">
+            <Label
+              className={`text-sm ${
+                errors.degreeStatus ? "text-red-500" : "text-gray-900"
+              }`}
+            >
+              Degree/Undergraduate Status
+              <span className="text-red-500">*</span>
+            </Label>
+            <Select
+              defaultValue={formData.educationInfo.degreeStatus}
+              onValueChange={(value) => {
+                handleSelectChange("degreeStatus", value);
+              }}
+            >
+              <SelectTrigger
+                className={`${
+                  errors.degreeStatus ? "border-red-500 focus:ring-red-500" : ""
+                }`}
+              >
