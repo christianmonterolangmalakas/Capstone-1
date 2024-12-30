@@ -924,4 +924,12 @@ const ProgressBar = () => {
               `}
             />
           </div>
-        </div>
+    </div>
+  const EducationInfo = () => {
+  const { nextStep, prevStep, formData, setEducationInfo } =
+    useApplicationAppStore();
+  const [errors, setErrors] = useState<any>({});
+  const handleSelectChange = (name: string, value: string) => {
+    setErrors((prev: any) => ({ ...prev, [name]: "" }));
+    setEducationInfo({ [name]: value });
+  };
