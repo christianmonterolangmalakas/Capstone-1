@@ -906,3 +906,22 @@ const fieldOfExpertiseOptions = [
 };
 
 export default QualificationInfo;
+const ProgressBar = () => {
+  const { step, getTotalSteps } = useApplicationAppStore();
+  const totalSteps: number = getTotalSteps();
+  return (
+    <div className="flex mx-auto mt-6 mb-10 justify-between w-3/4 max-w-2xl">
+      {[...Array(totalSteps - 1)].map((_, index) => (
+        <div key={index} className="flex items-center w-full">
+          <Circle step={step} currentIndex={index + 1} />
+          <div className="flex-grow h-[2px] sm:h-1 relative">
+            <div className="absolute top-0 left-0 h-full w-full bg-gray-300" />
+
+            <div
+              className={`absolute top-0 left-0 h-full w-full bg-blue-600
+              transition-transform duration-300 ease-in-out origin-left
+              transform ${step > index + 1 ? "scale-x-100" : "scale-x-0"}
+              `}
+            />
+          </div>
+        </div>
