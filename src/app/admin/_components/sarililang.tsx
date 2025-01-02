@@ -1066,4 +1066,17 @@ const ProgressBar = () => {
                 <DropdownMenuItem>
                   <Bell />
                   Notifications
-                </DropdownMenuItem>
+  </DropdownMenuItem>
+                 </DropdownMenuGroup>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem onClick={() => setOpen(true)}>
+                <LogOut />
+                Log out
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </SidebarMenuItem>
+      </SidebarMenu>
+    </>
+  );
+}
