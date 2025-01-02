@@ -993,3 +993,12 @@ const ProgressBar = () => {
               <p className="text-red-500 text-sm">{errors.degreeStatus}</p>
             )}
           </div>
+          const [open, setOpen] = React.useState(false);
+  const { isMobile } = useSidebar();
+  const handleLogout = async () => {
+    await logout();
+    window.location.assign("/");
+    toast.success("You have been logged out.");
+  };
+
+  return (
