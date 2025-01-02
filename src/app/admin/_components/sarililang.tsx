@@ -1002,3 +1002,18 @@ const ProgressBar = () => {
   };
 
   return (
+     <>
+      <AlertModal
+        title="Are you sure you want to logout?"
+        isOpen={open}
+        onClose={() => setOpen(false)}
+        onConfirm={handleLogout}
+      />
+      <SidebarMenu>
+        <SidebarMenuItem>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <SidebarMenuButton
+                size="lg"
+                className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+              >
